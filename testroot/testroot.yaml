@@ -1,0 +1,12 @@
+#testroot.yaml
+---
+- hosts: '{{ host }}'
+  gather_facts: yes
+  tasks:
+    - name: Get current user on remote
+      ansible.builtin.shell: |
+        whoami
+      become: true
+      register: out
+    - debug:
+        msg: "{{ out }}"
