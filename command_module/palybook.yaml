@@ -1,0 +1,15 @@
+-
+  name: "Command Module"
+  hosts: localhost
+  tasks:
+    -  name: Execute command 'data'
+       command: date
+    -  name: Display resolv.conf contents
+       command: cat /etc/resolv.conf
+    -  name: Disaply resolve.conf contents
+       commad: cat resolv.conf chdir=/etc
+    -  name: Create folder if not exists
+       command: mkdir /folder creates=/folder
+       
+       
+free_form: the command module takes a free form command to run. There is no parameter actually named "free form".
