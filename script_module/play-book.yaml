@@ -1,0 +1,8 @@
+---
+- name: 'hosts'
+  hosts: all
+  become: yes
+  tasks:
+    - name: 'Execute a script'
+      script: '/tmp/install_script.sh'
+# ansible-playbook -i inventory playbook.yaml
